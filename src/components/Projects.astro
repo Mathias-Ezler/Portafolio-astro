@@ -7,7 +7,7 @@ import LinkButton from "./LinkButton.astro"
 
 const TAGS = {
   NEXT: {
-    name: "Next.js",
+    name: "Astro",
     class: "bg-black text-white",
     icon: NextJS,
   },
@@ -19,21 +19,30 @@ const TAGS = {
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Warani Studios",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
+      "Clon de la página principal de Warani Studios. Creado desde cero con Astro, TypeScript y Tailwind CSS.",
+    link: "https://warani-studios-clone.vercel.app/",
+    github: "https://github.com/Mathias-Ezler/waraniStudios-clone.git",
+    image: "/projects/warani.png",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Fitnes Paraguay",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
+      "Plataforma con planes fitnes desde lo basico hasta lo más pro. Creada desde cero con Astro y Tailwind CSS.",
+    link: "https://pagina-web-de-eli.vercel.app/",
+    github: "https://github.com/Mathias-Ezler/Pagina-Web-de-Eli.git",
+    image: "/projects/fit.png",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+  {
+    title: "Te Hacemos",
+    description:
+      "Landing page para la actual empresa en la que trabajo. Creada con Astro y Tailwind CSS.",
+    link: "https://mathias-ezler.vercel.app/",
+    github: "",
+    image: "/projects/tehacemos.png",
   },
 ]
 ---
@@ -54,7 +63,7 @@ const PROJECTS = [
     </h3>
     <div class="flex flex-wrap mt-2">
       <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
+          {Array.isArray(tags) && tags.map((tag) => (
             <li>
               <span
                 class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
